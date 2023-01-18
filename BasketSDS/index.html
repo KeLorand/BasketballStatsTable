@@ -25,7 +25,8 @@
   var vendég_pontok = 0;
 
   /*-----------------------*/
-  function timedCount() {
+  function timedCount()
+  {
     $("#idő").html(minutes + ":" + seconds + "<br>" + (((minutes / 15) | 0) + 1) + ". negyed");
     ++seconds;
     if (seconds % 60 == 0) { ++minutes; seconds = 0; }
@@ -34,7 +35,8 @@
   }
 
   /*--------------------------------------------------*/
-  function ajax_get(urlsor, hova, tipus, aszinkron) {
+  function ajax_get(urlsor, hova, tipus, aszinkron)
+  {
     $.ajax({
       url: urlsor, type: "get", async: aszinkron, cache: false, dataType: tipus === 0 ? 'html' : 'json',
       beforeSend: function (xhr) { },
@@ -46,7 +48,8 @@
   };
 
   /*-----------------------------------*/
-  function ajax_post(urlsor, data, tipus) {     // !! változás: data
+  function ajax_post(urlsor, data, tipus)
+  {     // !! változás: data
     var s = "";
     $.ajax({
       url: urlsor, type: "post", data: data, async: false, cache: false, dataType: tipus === 0 ? 'html' : 'json',
@@ -59,7 +62,8 @@
   };
 
   /*-----------------------------*/
-  $(document).ready(function () {
+  $(document).ready(function ()
+  {
 
     var listItems = "";
     var k_json = ajax_post("kosar.php", "csapatok=1", 1);               // JSON!
@@ -75,7 +79,7 @@
     <h2>11SZ - Kosárlabda mérkőzés jegyzőkönyv</h2>
     <h3><i>Készítette: Simon Roland Dániel, Kele Loránd</i>(ver.: 2023.01)</H3>
   </div>
-  <div class="container-sm main">
+  <div class="container-sm main" style="margin-left: -10%; height: 100vh !important;">
     <div class="row d-flex justify-content-center">
       <div class="col-sm col-sm-2">
         <a id="away">Vendég: Csapat2</a>
@@ -86,11 +90,10 @@
             aria-expanded="false">
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">csapat1</a>
+            <a class="dropdown-item" href="#">csapat2</a>
+            <a class="dropdown-item" href="#">csapat3</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
           </div>
         </div>
       </div>
@@ -109,16 +112,16 @@
             aria-expanded="false">
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">csapat1</a>
+            <a class="dropdown-item" href="#">csapat2</a>
+            <a class="dropdown-item" href="#">csapat3</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
 
 
