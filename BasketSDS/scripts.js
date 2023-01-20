@@ -1,3 +1,5 @@
+//csapat név kiíró script
+
 var down = document.getElementById('home');
 var down2 = document.getElementById('away');
 
