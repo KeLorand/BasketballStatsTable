@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+
   <script src="jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -15,6 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
+  
 </head>
 
 <script type="text/javascript">
@@ -25,8 +27,7 @@
   var vendég_pontok = 0;
 
   /*-----------------------*/
-  function timedCount()
-  {
+  function timedCount() {
     $("#idő").html(minutes + ":" + seconds + "<br>" + (((minutes / 15) | 0) + 1) + ". negyed");
     ++seconds;
     if (seconds % 60 == 0) { ++minutes; seconds = 0; }
@@ -35,8 +36,7 @@
   }
 
   /*--------------------------------------------------*/
-  function ajax_get(urlsor, hova, tipus, aszinkron)
-  {
+  function ajax_get(urlsor, hova, tipus, aszinkron) {
     $.ajax({
       url: urlsor, type: "get", async: aszinkron, cache: false, dataType: tipus === 0 ? 'html' : 'json',
       beforeSend: function (xhr) { },
@@ -48,8 +48,7 @@
   };
 
   /*-----------------------------------*/
-  function ajax_post(urlsor, data, tipus)
-  {     // !! változás: data
+  function ajax_post(urlsor, data, tipus) {     // !! változás: data
     var s = "";
     $.ajax({
       url: urlsor, type: "post", data: data, async: false, cache: false, dataType: tipus === 0 ? 'html' : 'json',
@@ -62,8 +61,7 @@
   };
 
   /*-----------------------------*/
-  $(document).ready(function ()
-  {
+  $(document).ready(function () {
 
     var listItems = "";
     var k_json = ajax_post("kosar.php", "csapatok=1", 1);               // JSON!
@@ -82,7 +80,7 @@
   <div class="container-sm main" style="margin-left: -10%; height: 100vh !important;">
     <div class="row d-flex justify-content-center">
       <div class="col-sm col-sm-2">
-        <a id="away">Vendég: Csapat2</a>
+        <a id="home">Hazai: Csapat</a>
       </div>
       <div class="col-sm col-sm-1 dropdown_buttons">
         <div class="btn-group">
@@ -90,9 +88,20 @@
             aria-expanded="false">
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">csapat1</a>
-            <a class="dropdown-item" href="#">csapat2</a>
-            <a class="dropdown-item" href="#">csapat3</a>
+            <a class="dropdown-item" href="#" onclick="Function_1()" id="home1">home1</a>
+            <a class="dropdown-item" href="#" onclick="Function_2()" id="home2">home2</a>
+            <a class="dropdown-item" href="#" onclick="Function_3()" id="home3">home3</a>
+            <a class="dropdown-item" href="#" onclick="Function_4()" id="home4">home4</a>
+            <a class="dropdown-item" href="#" onclick="Function_5()" id="home5">home5</a>
+            <a class="dropdown-item" href="#" onclick="Function_6()" id="home6">home6</a>
+            <a class="dropdown-item" href="#" onclick="Function_7()" id="home7">home7</a>
+            <a class="dropdown-item" href="#" onclick="Function_8()" id="home8">home8</a>
+            <a class="dropdown-item" href="#" onclick="Function_9()" id="home9">home9</a>
+            <a class="dropdown-item" href="#" onclick="Function_10()" id="home10">home10</a>
+            <a class="dropdown-item" href="#" onclick="Function_11()" id="home11">home11</a>
+            <a class="dropdown-item" href="#" onclick="Function_12()" id="home12">home12</a>
+            <a class="dropdown-item" href="#" onclick="Function_13()" id="home13">home13</a>
+            <a class="dropdown-item" href="#" onclick="Function_14()" id="home14">home14</a>
             <div class="dropdown-divider"></div>
           </div>
         </div>
@@ -112,20 +121,26 @@
             aria-expanded="false">
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">csapat1</a>
-            <a class="dropdown-item" href="#">csapat2</a>
-            <a class="dropdown-item" href="#">csapat3</a>
+            <a class="dropdown-item" href="#" onclick="Function_15()" id="away1">away1</a>
+            <a class="dropdown-item" href="#" onclick="Function_16()" id="away2">away2</a>
+            <a class="dropdown-item" href="#" onclick="Function_17()" id="away3">away3</a>
+            <a class="dropdown-item" href="#" onclick="Function_18()" id="away4">away4</a>
+            <a class="dropdown-item" href="#" onclick="Function_19()" id="away5">away5</a>
+            <a class="dropdown-item" href="#" onclick="Function_20()" id="away6">away6</a>
+            <a class="dropdown-item" href="#" onclick="Function_21()" id="away7">away7</a>
+            <a class="dropdown-item" href="#" onclick="Function_22()" id="away8">away8</a>
+            <a class="dropdown-item" href="#" onclick="Function_23()" id="away9">away9</a>
+            <a class="dropdown-item" href="#" onclick="Function_24()" id="away10">away10</a>
+            <a class="dropdown-item" href="#" onclick="Function_25()" id="away11">away11</a>
+            <a class="dropdown-item" href="#" onclick="Function_26()" id="away12">away12</a>
+            <a class="dropdown-item" href="#" onclick="Function_27()" id="away13">away13</a>
+            <a class="dropdown-item" href="#" onclick="Function_28()" id="away14">away14</a>
             <div class="dropdown-divider"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
-
 </body>
-
+<script src="scripts.js"></script>
 </html>
