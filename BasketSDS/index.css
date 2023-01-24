@@ -11,10 +11,18 @@
     .dropdown_buttons{
         margin-left: 0%;
     }
+    .home1style{
+        margin-left: -10%;margin-right: 10%;
+    }
 }
 
 @media only screen and (max-width : 576px) {
     .main{
         text-align: center;
     }
+
+    .home1style{
+        margin-left: 0;margin-right: 0%;
+    }
 }
+
