@@ -1,6 +1,6 @@
 .main{
-    margin-top: 5%;
     text-align: end;
+    border: 5px solid black;
 }
 
 .dropdown_buttons{
