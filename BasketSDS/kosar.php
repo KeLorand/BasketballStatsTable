@@ -105,7 +105,7 @@ $játékosok = array(
    array('KECSKE',18, 'BOTKA Botond',2002,12,181,72),
    array('KECSKE',19, 'VELKEY Géza',2003,2,195,73),
    array('KECSKE',21, 'FAZEKAS Máté',2000,5,205,105),
-   array('KECSKE',24, 'KLOBUCAR Jaka',1987,23,198,91),
+   array('KECSKE',24, 'KLOBUCAR Jaka',1987,23,198,91), 
    array('KÖRMEND',0, 'GERÖLY Márton András',2004,34,198,92),
    array('KÖRMEND',1, 'CHAMBERS Siyani Tahir',1993,1,182,79),
    array('KÖRMEND',2, 'MOORE Michael Jarade',1994,4,201,94),
