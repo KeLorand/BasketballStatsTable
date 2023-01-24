@@ -66,7 +66,14 @@
     var listItems = "";
     var k_json = ajax_post("kosar.php", "csapatok=1", 1);               // JSON!
     console.log(k_json);
-
+    for (let i = 1; i <= 14; i++) {
+    $("#home" + i.toString()).html(k_json[i-1].CSAPAT);
+    }
+    for (let i = 1; i <= 14; i++) {
+    $("#away" + i.toString()).html(k_json[i-1].CSAPAT);
+    }
+   
+    
   });
 
 </script>

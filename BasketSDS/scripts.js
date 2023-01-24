@@ -198,3 +198,5 @@ function Function_28() {
   $('#parent2').append($el);
   down2.innerHTML = "Vendég: " + up.innerHTML;
 }
+
+//csapatnév listázó script
