@@ -25,6 +25,7 @@
   var time;
   var hazai_pontok = 0;
   var vendég_pontok = 0;
+  var timerStarted = false;
 
   /*-----------------------*/
   function timedCount() {
@@ -33,6 +34,16 @@
     if (seconds % 60 == 0) { ++minutes; seconds = 0; }
 
     time = setTimeout("timedCount()", 1000);
+  }
+
+  function startTimer() {
+    if (!timerStarted) {timerStarted = true; timedCount();}
+    else {alert("Az időzítő már el van indítva")}
+  }
+
+  function stopTimer() {
+    if (timerStarted) {timerStarted = false; clearTimeout(time);}
+    else {alert("Az időzítő már meg van állítva")}
   }
 
   /*--------------------------------------------------*/
@@ -164,6 +175,8 @@
       </div>
       <div class="col-sm-2">
         2 of 2
+        <button onclick="startTimer()">START<div id="idő"></div></button>
+        <button onclick="stopTimer()">STOP</button>
       </div>
     </div>
    
