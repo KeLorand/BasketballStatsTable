@@ -1,4 +1,4 @@
-.main{
+.main, .homeplayers, .awayplayers{
     text-align: center;
     border: 5px solid black;
 }
