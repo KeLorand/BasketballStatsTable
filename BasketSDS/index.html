@@ -78,13 +78,13 @@
     var k_json = ajax_post("kosar.php", "csapatok=1", 1);               // JSON!
     console.log(k_json);
     for (let i = 1; i <= 14; i++) {
-    $("#home" + i.toString()).html(k_json[i-1].CSAPAT);
+      $("#home" + i.toString()).html(k_json[i - 1].CSAPAT);
     }
     for (let i = 1; i <= 14; i++) {
-    $("#away" + i.toString()).html(k_json[i-1].CSAPAT);
+      $("#away" + i.toString()).html(k_json[i - 1].CSAPAT);
     }
-   
-    
+
+
   });
 
 </script>
@@ -98,7 +98,7 @@
   <div class="container">
     <div class="row d-flex justify-content-start">
       <div class="col-sm-10">
-        <div class="container-sm main" style="margin-left: -10%; height: 100vh !important;">
+        <div class="container-sm main" style="height: 100vh !important;">
           <div class="row d-flex justify-content-center">
             <div class="col-sm-2 home1style">
               <a id="home">Hazai:<br> Csapat</a>
@@ -161,13 +161,73 @@
               </div>
             </div>
           </div>
-          <div class="container">
+          <div class="container text-center">
             <div class="row">
               <div class="col homeplayers">
-                1 of 2
+                <div class="col-sm12 bg-light p-3 border" id="home_bench">
+                  <p>Csere</p>
+                  <div class="container">
+                    <div class="row row-cols-2">
+                      <div class="col"><a href="#" onclick="" id="home_bench1">home1</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench2">home2</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench3">home3</a></div>
+                      <div class="col"> <a href="#" onclick="" id="home_bench4">home4</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench5">home5</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench6">home6</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench7">home7</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench8">home8</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench9">home9</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench10">home10</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench11">home11</a></div>
+                      <div class="col"> <a href="#" onclick="" id="home_bench12">home12</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench13">home13</a></div>
+                      <div class="col"><a href="#" onclick="" id="home_bench14">home14</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 bg-light p-3 border" id="home_field">
+                  <p>Pályán</p>
+                  <div class="row row-cols-5">
+                    <div class="col"><a href="#" onclick="" id="home_field1">home1</a></div>
+                    <div class="col"><a href="#" onclick="" id="home_field2">home2</a></div>
+                    <div class="col"><a href="#" onclick="" id="home_field3">home3</a></div>
+                    <div class="col"> <a href="#" onclick="" id="home_field4">home4</a></div>
+                    <div class="col"><a href="#" onclick="" id="home_field5">home5</a></div>
+                  </div>
+                </div>
               </div>
               <div class="col awayplayers">
-                2 of 2
+                <div class="col-sm12 bg-light p-3 border" id="away_bench">
+                  <p>Csere</p>
+                  <div class="container">
+                    <div class="row row-cols-2">
+                      <div class="col"><a href="#" onclick="" id="away_bench1">away1</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench2">away2</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench3">away3</a></div>
+                      <div class="col"> <a href="#" onclick="" id="away_bench4">away4</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench5">away5</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench6">away6</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench7">away7</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench8">away8</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench9">away9</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench10">away10</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench11">away11</a></div>
+                      <div class="col"> <a href="#" onclick="" id="away_bench12">away12</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench13">away13</a></div>
+                      <div class="col"><a href="#" onclick="" id="away_bench14">away14</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 bg-light p-3 border" id="away_field">
+                  <p>Pályán</p>
+                  <div class="row row-cols-5">
+                    <div class="col"><a href="#" onclick="" id="away_field1">home1</a></div>
+                    <div class="col"><a href="#" onclick="" id="away_field2">home2</a></div>
+                    <div class="col"><a href="#" onclick="" id="away_field3">home3</a></div>
+                    <div class="col"> <a href="#" onclick="" id="away_field4">home4</a></div>
+                    <div class="col"><a href="#" onclick="" id="away_field5">home5</a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -179,7 +239,7 @@
         <button onclick="stopTimer()">STOP</button>
       </div>
     </div>
-   
+
 
 
 </body>
