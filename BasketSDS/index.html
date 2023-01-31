@@ -37,13 +37,13 @@
   }
 
   function startTimer() {
-    if (!timerStarted) {timerStarted = true; timedCount();}
-    else {alert("Az időzítő már el van indítva")}
+    if (!timerStarted) { timerStarted = true; timedCount(); }
+    else { alert("Az időzítő már el van indítva") }
   }
 
   function stopTimer() {
-    if (timerStarted) {timerStarted = false; clearTimeout(time);}
-    else {alert("Az időzítő már meg van állítva")}
+    if (timerStarted) { timerStarted = false; clearTimeout(time); }
+    else { alert("Az időzítő már meg van állítva") }
   }
 
   /*--------------------------------------------------*/
@@ -234,9 +234,13 @@
         </div>
       </div>
       <div class="col-sm-2">
-        2 of 2
-        <button onclick="startTimer()">START<div id="idő"></div></button>
-        <button onclick="stopTimer()">STOP</button>
+        <p>Timer</p>
+        <div class="container">
+          <div class="row row-cols-2">
+            <div class="col"> <button onclick="startTimer()">START<div id="idő"></div></button></div>
+            <div class="col"><button onclick="stopTimer()">STOP</button></div>
+          </div>
+        </div>
       </div>
     </div>
 
