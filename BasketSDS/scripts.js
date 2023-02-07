@@ -2,8 +2,8 @@
 
 var down = document.getElementById('home');
 var down2 = document.getElementById('away');
-var selected1;
-var selected2;
+var selected1_home;
+var selected2_home;
 
 function Function_1() {
   var up = document.getElementById('home1');
@@ -202,11 +202,24 @@ function Function_28() {
 }
 
 function reply_click(clicked_id) {
-  alert(clicked_id);
-  alert(selected1);
-  if(selected1 == undefined){
-    alert("mukodik");
-  }
+    if(selected1_home == undefined){
+      selected1_home = clicked_id;
+    }
+    else{
+      selected2_home = clicked_id;
+    }
+    if (selected1_home != undefined && selected2_home != undefined){
+      alert(selected1_home);
+      alert(selected2_home);
+      selected1_home = undefined;
+      selected2_home = undefined;
+    }
+    if (selected1_home == selected2_home){
+      alert("A két játékos nem lehet ugyan az!");
+      selected1_home = undefined;
+      selected2_home = undefined;
+    }
+    
 }
 
 //csapatnév listázó script
