@@ -204,21 +204,22 @@ function Function_28() {
 function reply_click(clicked_id) {
     if(selected1_home == undefined){
       selected1_home = clicked_id;
+      console.log(selected1_home);
     }
     else{
       selected2_home = clicked_id;
+      console.log(selected2_home);
     }
     if (selected1_home != undefined && selected2_home != undefined){
-      alert(selected1_home);
-      alert(selected2_home);
+      if (selected1_home == selected2_home){
+        alert("A két játékos nem lehet ugyan az!");
+      }
       selected1_home = undefined;
       selected2_home = undefined;
     }
-    if (selected1_home == selected2_home){
-      alert("A két játékos nem lehet ugyan az!");
-      selected1_home = undefined;
-      selected2_home = undefined;
-    }
+    
+    
+    
     
 }
 
