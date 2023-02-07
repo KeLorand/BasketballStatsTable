@@ -2,6 +2,8 @@
 
 var down = document.getElementById('home');
 var down2 = document.getElementById('away');
+var selected1;
+var selected2;
 
 function Function_1() {
   var up = document.getElementById('home1');
@@ -197,6 +199,14 @@ function Function_28() {
   var $el = $('.child').clone();
   $('#parent2').append($el);
   down2.innerHTML = "Vendég: " + up.innerHTML;
+}
+
+function reply_click(clicked_id) {
+  alert(clicked_id);
+  alert(selected1);
+  if(selected1 == undefined){
+    alert("mukodik");
+  }
 }
 
 //csapatnév listázó script
