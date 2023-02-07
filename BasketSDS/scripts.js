@@ -5,6 +5,13 @@ var down2 = document.getElementById('away');
 var selected1_home;
 var selected2_home;
 
+var change1;
+var change2;
+
+var change1i;
+var change2i;
+
+
 function Function_1() {
   var up = document.getElementById('home1');
   var $el = $('.child').clone();
@@ -202,25 +209,43 @@ function Function_28() {
 }
 
 function reply_click(clicked_id) {
-    if(selected1_home == undefined){
-      selected1_home = clicked_id;
-      console.log(selected1_home);
+  if (selected1_home == undefined) {
+    selected1_home = clicked_id;
+    console.log(selected1_home);
+  }
+  else {
+    selected2_home = clicked_id;
+    console.log(selected2_home);
+  }
+  if (selected1_home != undefined && selected2_home != undefined) {
+    if (selected1_home == selected2_home) {
+      alert("A két játékos nem lehet ugyan az!");
     }
-    else{
-      selected2_home = clicked_id;
-      console.log(selected2_home);
-    }
-    if (selected1_home != undefined && selected2_home != undefined){
-      if (selected1_home == selected2_home){
-        alert("A két játékos nem lehet ugyan az!");
-      }
-      selected1_home = undefined;
-      selected2_home = undefined;
-    }
-    
-    
-    
-    
+  }
+
+ 
+
+  if (selected1_home != selected2_home){
+    change1 = document.getElementById(selected1_home);
+    change2 = document.getElementById(selected2_home);
+    change1i = change1.innerHTML;
+    change2i = change2.innerHTML;
+    change1.innerHTML = change2i;
+    change2.innerHTML = change1i;
+    selected1_home = undefined;
+    selected2_home = undefined;
+  }
+
+  
+
+  
+
+ 
+  
+
+
+
+
 }
 
 //csapatnév listázó script
