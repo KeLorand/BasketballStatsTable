@@ -5,6 +5,13 @@ var timer = document.getElementById('idő');
 
 var down = document.getElementById('home');
 var down2 = document.getElementById('away');
+
+var score_home_html = document.getElementById('home_score');
+var score_away_html = document.getElementById('away_score');
+
+var points_home = document.getElementById('home_points');
+var points_away= document.getElementById('away_points');
+
 var selected1_home;
 var selected2_home;
 
@@ -22,6 +29,10 @@ var change2a;
 
 var change1ia;
 var change2ia;
+
+let score_home = 0;
+let score_away = 0;
+
 
 
 
@@ -284,6 +295,18 @@ function reply_click2(clicked_id) {
     selected1_away = undefined;
     selected2_away = undefined;
   }
+}
+
+function giveHomePoints(){
+    score_home = score_home + parseInt(points_home.value[0]);
+    score_home_html.innerHTML = score_home;
+    console.log(score_home);
+}
+
+function giveAwayPoints(){
+  score_away = score_away + parseInt(points_away.value[0]);
+  score_away_html.innerHTML = score_away;
+  console.log(score_away);
 }
 
 
