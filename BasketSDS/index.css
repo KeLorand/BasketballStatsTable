@@ -1,6 +1,11 @@
-.main, .homeplayers, .awayplayers{
+.homeplayers, .awayplayers, .reader{
     text-align: center;
     border: 5px solid black;
+    border-radius: 10px;
+}
+
+.main{
+    text-align: center;
 }
 
 .dropdown_buttons{

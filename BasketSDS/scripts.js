@@ -280,6 +280,7 @@ function reply_click2(clicked_id) {
     change2ia = change2a.innerHTML;
     change1a.innerHTML = change2ia;
     change2a.innerHTML = change1ia;
+    reader.innerHTML += timer.innerHTML + " Csere: " + " " + change1ia + " <-> "+ change2ia + "<br>";
     selected1_away = undefined;
     selected2_away = undefined;
   }
