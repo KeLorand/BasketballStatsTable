@@ -1,5 +1,8 @@
 //csapat név kiíró script
 
+var reader = document.getElementById('reader');
+var timer = document.getElementById('idő');
+
 var down = document.getElementById('home');
 var down2 = document.getElementById('away');
 var selected1_home;
@@ -19,6 +22,8 @@ var change2a;
 
 var change1ia;
 var change2ia;
+
+
 
 
 function Function_1() {
@@ -243,6 +248,7 @@ function reply_click(clicked_id) {
     change2i = change2.innerHTML;
     change1.innerHTML = change2i;
     change2.innerHTML = change1i;
+    reader.innerHTML += timer.innerHTML + " Csere: " + " " + change1i + " <-> "+ change2i + "<br>";
     selected1_home = undefined;
     selected2_home = undefined;
   }

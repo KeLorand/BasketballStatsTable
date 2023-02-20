@@ -26,26 +26,30 @@
   var timerStarted = false;
 
   /*-----------------------*/
-  function timedCount() {
-    $("#idő").html(minutes + ":" + seconds + "<br>" + (((minutes / 15) | 0) + 1) + ". negyed");
+  function timedCount()
+  {
+    $("#idő").html((((minutes / 15) | 0) + 1) + ". negyed " + minutes + ":" + seconds);
     ++seconds;
     if (seconds % 60 == 0) { ++minutes; seconds = 0; }
 
     time = setTimeout("timedCount()", 1000);
   }
 
-  function startTimer() {
+  function startTimer()
+  {
     if (!timerStarted) { timerStarted = true; timedCount(); }
     else { alert("Az időzítő már el van indítva") }
   }
 
-  function stopTimer() {
+  function stopTimer()
+  {
     if (timerStarted) { timerStarted = false; clearTimeout(time); }
     else { alert("Az időzítő már meg van állítva") }
   }
 
   /*--------------------------------------------------*/
-  function ajax_get(urlsor, hova, tipus, aszinkron) {
+  function ajax_get(urlsor, hova, tipus, aszinkron)
+  {
     $.ajax({
       url: urlsor, type: "get", async: aszinkron, cache: false, dataType: tipus === 0 ? 'html' : 'json',
       beforeSend: function (xhr) { },
@@ -57,7 +61,8 @@
   };
 
   /*-----------------------------------*/
-  function ajax_post(urlsor, data, tipus) {     // !! változás: data
+  function ajax_post(urlsor, data, tipus)
+  {     // !! változás: data
     var s = "";
     $.ajax({
       url: urlsor, type: "post", data: data, async: false, cache: false, dataType: tipus === 0 ? 'html' : 'json',
@@ -70,15 +75,18 @@
   };
 
   /*-----------------------------*/
-  $(document).ready(function () {
+  $(document).ready(function ()
+  {
 
     var listItems = "";
     var k_json = ajax_post("kosar.php", "csapatok=1", 1);               // JSON!
     console.log(k_json);
-    for (let i = 1; i <= 14; i++) {
+    for (let i = 1; i <= 14; i++)
+    {
       $("#home" + i.toString()).html(k_json[i - 1].CSAPAT);
     }
-    for (let i = 1; i <= 14; i++) {
+    for (let i = 1; i <= 14; i++)
+    {
       $("#away" + i.toString()).html(k_json[i - 1].CSAPAT);
     }
 
@@ -95,7 +103,7 @@
   </div>
   <div class="container">
     <div class="row d-flex justify-content-start">
-      <div class="col-sm-10">
+      <div class="col-sm-9">
         <div class="container-sm main" style="height: 100vh !important;">
           <div class="row d-flex justify-content-center">
             <div class="col-sm-2 home1style">
@@ -229,9 +237,13 @@
               </div>
             </div>
           </div>
+          Játékesemények
+          <div class="container-sm" style="height: 100vh !important; margin-top: 5%;" id="reader">
+            
+          </div>
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <label>Helyszín:<br></label>
         <input type="text" class="form-control">
         <label>Dátum:<br></label>
@@ -250,4 +262,5 @@
 
 </body>
 <script src="scripts.js"></script>
+
 </html>
