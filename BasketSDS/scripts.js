@@ -11,6 +11,15 @@ var change2;
 var change1i;
 var change2i;
 
+var selected1_away;
+var selected2_away;
+
+var change1a;
+var change2a;
+
+var change1ia;
+var change2ia;
+
 
 function Function_1() {
   var up = document.getElementById('home1');
@@ -237,17 +246,39 @@ function reply_click(clicked_id) {
     selected1_home = undefined;
     selected2_home = undefined;
   }
+}
 
-  
-
-  
+function reply_click2(clicked_id) {
+  if (selected1_away == undefined) {
+    selected1_away = clicked_id;
+    console.log(selected1_away);
+  }
+  else {
+    selected2_away = clicked_id;
+    console.log(selected2_away);
+  }
+  if (selected1_away != undefined && selected2_away != undefined) {
+    if (selected1_away == selected2_away) {
+      alert("A két játékos nem lehet ugyan az!");
+      selected1_away = undefined;
+      selected2_away = undefined;
+    }
+  }
 
  
-  
 
-
-
-
+  if (selected1_away != selected2_away){
+    change1a = document.getElementById(selected1_away);
+    change2a = document.getElementById(selected2_away);
+    change1ia = change1a.innerHTML;
+    change2ia = change2a.innerHTML;
+    change1a.innerHTML = change2ia;
+    change2a.innerHTML = change1ia;
+    selected1_away = undefined;
+    selected2_away = undefined;
+  }
 }
+
+
 
 //csapatnév listázó script
